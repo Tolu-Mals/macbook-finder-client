@@ -15,7 +15,7 @@ const Header = () => {
             <Center>
                 <Image src={FinderLogo} />
             </Center>
-            <Heading>Macbook Finder</Heading>
+            <Heading as="h1">Macbook Finder</Heading>
             <p>Get the best deal on Macbooks from Jumia using info from our custom web crawler.</p>
             <Button>Find a Macbook</Button>
         </Center>
