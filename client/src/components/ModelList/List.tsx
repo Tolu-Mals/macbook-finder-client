@@ -3,49 +3,40 @@ import { Wrap } from '@chakra-ui/react';
 import ListItem from './ListItem';
 
 export interface Model {
-    id: number;
+    id: string;
     name: string;
     image: string;
 }
 
-const modelData: Model[] = [
+export const allModels: Model[] = [
     {
-      id: 0,
+      id: '0',
       name: 'Apple MacBook Pro 14" M1 Pro Chip 16GB RAM, 512GB (2021 Model)',
-      image: 'https://user-images.githubusercontent.com/30352484/192143144-4051e29d-0c83-4ef9-9374-7f3c662ffcda.png'
+      image: 'https://user-images.githubusercontent.com/30352484/192147162-ca94a124-d23f-401b-9ae6-69b2103412bd.png'
     },
     {
-      id: 1,
+      id: '1',
       name: 'Apple MacBook Pro 14" M1 Pro Chip 16GB RAM, 512GB (2021 Model)',
-      image: 'https://user-images.githubusercontent.com/30352484/192143144-4051e29d-0c83-4ef9-9374-7f3c662ffcda.png'
+      image: 'https://user-images.githubusercontent.com/30352484/192147162-ca94a124-d23f-401b-9ae6-69b2103412bd.png'
     },
     {
-      id: 2,
+      id: '2',
       name: 'Apple MacBook Pro 14" M1 Pro Chip 16GB RAM, 512GB (2021 Model)',
-      image: 'https://user-images.githubusercontent.com/30352484/192143144-4051e29d-0c83-4ef9-9374-7f3c662ffcda.png'
+      image: 'https://user-images.githubusercontent.com/30352484/192147162-ca94a124-d23f-401b-9ae6-69b2103412bd.png'
     },
     {
-      id: 3,
+      id: '3',
       name: 'Apple MacBook Pro 14" M1 Pro Chip 16GB RAM, 512GB (2021 Model)',
-      image: 'https://user-images.githubusercontent.com/30352484/192143144-4051e29d-0c83-4ef9-9374-7f3c662ffcda.png'
+      image: 'https://user-images.githubusercontent.com/30352484/192147162-ca94a124-d23f-401b-9ae6-69b2103412bd.png'
     }
 ];
   
 
 const List = () => {
 
-    const [ models, setModels ] = React.useState<Model[]>([]);
-
-    //Simulate a fetch request
-    React.useEffect(() => {
-      setTimeout(() => {
-        setModels(modelData);
-      }, 2000)
-    });
-
     return (
         <Wrap>
-            { models.map((model) => <ListItem model={model} />)}
+            { allModels.map((model) => <ListItem model={model} />)}
         </Wrap>
     )
 }
