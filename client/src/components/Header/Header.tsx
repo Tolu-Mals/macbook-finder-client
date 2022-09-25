@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Navbar from '../Navbar/Navbar';
 
 import { Center, Heading, Button, Image } from '@chakra-ui/react';
