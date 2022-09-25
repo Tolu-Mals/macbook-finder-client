@@ -1,15 +1,16 @@
-import * as React from "react";
+import { Routes, Route } from 'react-router-dom';
 import {
   ChakraProvider,
   theme,
-  Container
 } from "@chakra-ui/react";
-import Header from "./components/Header/Header";
+import Home from './pages/Home';
+
+
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Container>
-      <Header />
-    </Container>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   </ChakraProvider>
 )
