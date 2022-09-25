@@ -2,7 +2,6 @@ import { Flex, Heading, Text } from '@chakra-ui/react';
 
 const Header = () => {
   return (
-    <header>
        <header>
             <Flex justifyContent={"space-between"}>
                 <Heading>List of Models</Heading>
@@ -12,7 +11,6 @@ const Header = () => {
                 </div>
             </Flex>
         </header>     
-    </header>
   )
 }
 
