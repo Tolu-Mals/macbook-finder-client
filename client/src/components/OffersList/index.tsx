@@ -1,41 +1,51 @@
 import Header from './Header';
+import List from './List';
+
+export interface Statistic {
+  label: string;
+  value: number;
+}
 
 export interface Offer {
-  index: string;
+  id: string;
   name: string;
   price: number;
-  noOfReviews: number;
-  sellerScore: number;
-  rating: number;
+  statistics: Statistic[];
   isRecommended: boolean;
 }
 
 export const allOffers: Offer[] = [
   {
-    index: '0',
+    id: '0',
     name: 'Fire Nation Computing Ltd.',
     price: 1000000,
-    noOfReviews: 10,
-    sellerScore: 0.6,
-    rating: 2,
+    statistics: [
+      { label: 'No of reviews', value: 10 },
+      { label: 'Seller Score', value: 0.6 },
+      { label: 'Rating', value: 2 },
+    ],
     isRecommended: false,
   },
   {
-    index: '1',
+    id: '1',
     name: 'Fire Nation Computing Ltd.',
     price: 1000000,
-    noOfReviews: 10,
-    sellerScore: 0.6,
-    rating: 2,
+    statistics: [
+      { label: 'No of reviews', value: 10 },
+      { label: 'Seller Score', value: 0.6 },
+      { label: 'Rating', value: 2 },
+    ],
     isRecommended: false,
   },
   {
-    index: '2',
+    id: '2',
     name: 'Fire Nation Computing Ltd.',
     price: 1000000,
-    noOfReviews: 10,
-    sellerScore: 0.6,
-    rating: 2,
+    statistics: [
+      { label: 'No of reviews', value: 10 },
+      { label: 'Seller Score', value: 0.6 },
+      { label: 'Rating', value: 2 },
+    ],
     isRecommended: false,
   }
 ];
@@ -44,6 +54,7 @@ const index = () => {
   return (
     <main>
       <Header />
+      <List />
     </main>
   )
 }

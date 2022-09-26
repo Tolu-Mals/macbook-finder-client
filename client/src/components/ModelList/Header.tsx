@@ -1,16 +1,16 @@
-import { Flex, Heading, Text } from '@chakra-ui/react';
+import { Flex, Heading, Text, chakra } from '@chakra-ui/react';
 
 const Header = () => {
   return (
-       <header>
-            <Flex justifyContent={"space-between"}>
-                <Heading>List of Models</Heading>
-                <div>
-                    <Text>Last Updated</Text>
-                    <Text>6th September, 2022</Text>
-                </div>
+       <chakra.header mb={2}>
+            <Flex justifyContent={"space-between"} alignItems={"flex-end"}>
+                <Heading size="sm">List of Models</Heading>
+                <chakra.div textAlign={"right"}>
+                    <Text fontSize="xs" fontWeight={600} fontFamily={"'Poppins', sans-serif"} color="gray.400">Last Updated</Text>
+                    <Text fontSize="sm" fontWeight={600} fontFamily={"'Poppins', sans-serif"}>6th September, 2022</Text>
+                </chakra.div>
             </Flex>
-        </header>     
+        </chakra.header>     
   )
 }
 

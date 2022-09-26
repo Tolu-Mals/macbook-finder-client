@@ -5,7 +5,7 @@ import { allOffers } from '.';
 const List = () => {
   return (
     <Wrap>
-      { allOffers.map((offer) => <ListItem offer={offer} />) } 
+      { allOffers.map((offer) => <ListItem offer={offer} key={offer.id} />) } 
     </Wrap>
   )
 }

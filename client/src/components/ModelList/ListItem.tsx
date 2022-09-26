@@ -10,10 +10,29 @@ const ListItem = (props: Props) => {
     const { model } = props;
 
     return (
-        <WrapItem>
-            <Link as={RouterLink} to={`/details/model-${model.id}`}>
-                <Box><Image alt={model.name} src={model.image} /></Box>
-                <Text>{model.name}</Text>
+        <WrapItem minH={"70px"}>
+            <Link
+            as={RouterLink} 
+            to={`/details/model-${model.id}`}
+            _hover={{
+                border: "none"
+            }}
+            bg={"white"}
+            display={"flex"}
+            gap={"1rem"}
+            p={"1rem"}
+            alignItems={"center"}
+            >
+                <Box sx={{
+                    flex: 1
+                }}>
+                    <Image alt={model.name} src={model.image} />
+                </Box>
+                <Text sx={{
+                    flex: 4
+                }}>
+                    {model.name}
+                </Text>
             </Link>
         </WrapItem>
     )
