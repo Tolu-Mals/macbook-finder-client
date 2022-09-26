@@ -1,6 +1,6 @@
 import { WrapItem, Text, Box, Image, Link } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 import { Model } from './List';
-import useLinkNavigation from '../hooks/useLinkNavigate';
 
 interface Props {
     model: Model
@@ -8,14 +8,10 @@ interface Props {
 
 const ListItem = (props: Props) => {
     const { model } = props;
-    const navigate = useLinkNavigation(`/details/model-${model.id}`);
-    const handleLinkClick = () => {
-        navigate && navigate();
-    }
-    
+
     return (
         <WrapItem>
-            <Link onClick={handleLinkClick}>
+            <Link as={RouterLink} to={`/details/model-${model.id}`}>
                 <Box><Image alt={model.name} src={model.image} /></Box>
                 <Text>{model.name}</Text>
             </Link>
