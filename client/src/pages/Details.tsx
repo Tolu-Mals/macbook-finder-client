@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { Container, Center, Box, Image, Heading, Wrap } from '@chakra-ui/react';
+import { Container, Center, Box, Image, Heading } from '@chakra-ui/react';
 import Navbar from '../components/Navbar/Navbar';
 import { allModels } from '../components/ModelList/List';
+import OffersList from '../components/OffersList';
+
 
 const Details = () => {
   const { id } = useParams();
@@ -22,6 +24,7 @@ const Details = () => {
             { productImageComp }
             <Heading as="h1">{name}</Heading>
         </Center>
+        <OffersList />
     </Container>
   )
 }

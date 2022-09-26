@@ -1,7 +1,16 @@
-import { Wrap } from '@chakra-ui/react';
 import Header from './Header';
 
-export const allOffers = [
+export interface Offer {
+  index: string;
+  name: string;
+  price: number;
+  noOfReviews: number;
+  sellerScore: number;
+  rating: number;
+  isRecommended: boolean;
+}
+
+export const allOffers: Offer[] = [
   {
     index: '0',
     name: 'Fire Nation Computing Ltd.',
