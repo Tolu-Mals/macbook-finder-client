@@ -46,6 +46,8 @@ const Header = () => {
               backgroundColor: 'brand.100'
             }}
             fontSize={["0.9rem", "1rem",]}
+            as="a"
+            href="#models"
             >
               Find a Macbook
             </Button>

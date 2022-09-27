@@ -2,7 +2,7 @@ import { Flex, Heading, Text, chakra } from '@chakra-ui/react';
 
 const Header = () => {
   return (
-       <chakra.header mb={2}>
+       <chakra.header mb={2} id="models">
             <Flex justifyContent={"space-between"} alignItems={"flex-end"}>
                 <Heading size={["sm", "md"]}>List of Models</Heading>
                 <chakra.div textAlign={"right"}>
