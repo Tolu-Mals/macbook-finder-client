@@ -1,7 +1,8 @@
 import Header from '../components/Header/Header';
 import ModelList from '../components/ModelList';
-import { Divider, useToast } from '@chakra-ui/react';
+import { Divider, useToast, chakra } from '@chakra-ui/react';
 import { useEffect } from 'react';
+import Reviews from '../components/Reviews/Reviews';
 
 const Home = () => {
   const toast = useToast();
@@ -27,6 +28,7 @@ const Home = () => {
       <Header />
       <ModelList />
       <Divider />
+      <Reviews />
     </div>
   )
 }
