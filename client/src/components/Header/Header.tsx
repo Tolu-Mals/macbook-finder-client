@@ -5,11 +5,14 @@ import FinderLogo from '../../assets/images/finder_logo.png';
 const Header = () => {
   return (
     <chakra.header bg="white" pt={4}>
-      <Container>
+      <Container maxW="1200px">
         <Navbar />
         <Center
         flexDirection={"column"}
         textAlign={"center"}
+        w={["100%","60%", "50%", "37%"]}
+        ml={"auto"}
+        mr={"auto"}
         pt={8}
         pb={14}
         >
@@ -19,7 +22,7 @@ const Header = () => {
             <Heading 
             as="h1"
             fontWeight={800}
-            fontSize={"2rem"}
+            fontSize={["2rem", "2.5rem",]}
             pb={2}
             >
               Macbook Finder
@@ -29,7 +32,7 @@ const Header = () => {
             fontWeight={600}
             color="gray.400"
             pb={3}
-            fontSize={"0.9rem"}
+            fontSize={["0.9rem", "1rem"]}
             >
               Get the best deal on Macbooks from Jumia using info from our custom web crawler.</Text>
             <Button 
@@ -42,7 +45,7 @@ const Header = () => {
             _hover={{
               backgroundColor: 'brand.100'
             }}
-            fontSize={"0.9rem"}
+            fontSize={["0.9rem", "1rem",]}
             >
               Find a Macbook
             </Button>

@@ -10,7 +10,7 @@ const ListItem = (props: Props) => {
     const { model } = props;
 
     return (
-        <WrapItem minH={"70px"}>
+        <WrapItem minH={"70px"} w={["100%", "100%", "100%", "375px"]}>
             <Link
             as={RouterLink} 
             to={`/details/model-${model.id}`}
@@ -22,15 +22,21 @@ const ListItem = (props: Props) => {
             gap={"1rem"}
             p={"1rem"}
             alignItems={"center"}
+            borderRadius={8}
+            w="100%"
             >
                 <Box sx={{
                     flex: 1
                 }}>
                     <Image alt={model.name} src={model.image} />
                 </Box>
-                <Text sx={{
-                    flex: 4
-                }}>
+                <Text 
+                sx={{
+                    flex: 4,
+                    fontSize: ["xs","md"],
+                    fontFamily: '"Poppins", sans-serif',
+                }}
+                >
                     {model.name}
                 </Text>
             </Link>

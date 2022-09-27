@@ -35,7 +35,7 @@ export const allModels: Model[] = [
 const List = () => {
 
     return (
-        <Wrap>
+        <Wrap spacingY={4} spacingX={4}>
             { allModels.map((model) => <ListItem model={model} key={model.id} />)}
         </Wrap>
     )
