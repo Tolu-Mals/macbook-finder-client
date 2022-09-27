@@ -13,8 +13,10 @@ const ListItem = (props: Props) => {
   const formattedPrice = Intl.NumberFormat('en-US', { style: 'currency', currency: 'NGN', currencyDisplay: 'narrowSymbol' }).format(offer.price);
 
   return (
-    <WrapItem w="100%" bg="white" p={4}>
-      <Link w="100%">
+    <WrapItem minH={"70px"} w={["100%", "100%", "350px", "375px"]}bg="white" p={4} borderRadius={8}>
+      <Link w="100%" _hover={{
+        border: "none"
+      }}>
         <Text
         sx={{
           fontWeight: 500,

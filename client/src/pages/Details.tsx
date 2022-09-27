@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { allModels } from '../components/ModelList/List';
 import OffersList from '../components/OffersList';
 import DetailsHeader from '../components/DetailsHeader';
+import Reviews from '../components/Reviews/Reviews';
 
 const Details = () => {
   const { id } = useParams();
@@ -13,6 +14,7 @@ const Details = () => {
     <div>
         <DetailsHeader imageUrl={imageUrl} name={name} />
         <OffersList />
+        <Reviews />
     </div>
   )
 }

@@ -33,7 +33,7 @@ const ListItem = (props: Props) => {
                 <Text 
                 sx={{
                     flex: 4,
-                    fontSize: ["xs","md"],
+                    fontSize: ["sm","md"],
                     fontFamily: '"Poppins", sans-serif',
                 }}
                 >

@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <chakra.header mb={6}>
         <Flex alignItems={"center"} justifyContent={"space-between"}>
-          <Text fontSize={"lg"} fontWeight={700} fontFamily={"'Poppins', sans-serif"}>
+          <Text fontSize={["md","lg"]} fontWeight={700} fontFamily={"'Poppins', sans-serif"}>
             All Offers ({allOffers.length})
           </Text>
           <SortingDropdown />

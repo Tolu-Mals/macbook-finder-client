@@ -20,6 +20,9 @@ const Navbar = () => {
           href="#" 
           fontFamily={"Poppins"}
           mb={1}
+          _hover={{
+            border: "none"
+          }}
           >
             Twitter
           </Link>
@@ -33,6 +36,9 @@ const Navbar = () => {
           href="#"
           fontFamily={"Poppins"}
           mb={1}
+          _hover={{
+            border: "none"
+          }}
           >
             Github
           </Link>

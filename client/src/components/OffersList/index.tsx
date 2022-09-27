@@ -53,8 +53,8 @@ export const allOffers: Offer[] = [
 
 const index = () => {
   return (
-    <chakra.main bg={"gray.50"} pt={6}>
-      <Container>
+    <chakra.main bg={"gray.50"} py={6}>
+      <Container maxW="1200px">
         <Header />
         <List />
       </Container>
