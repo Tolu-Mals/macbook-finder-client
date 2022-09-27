@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { allModels } from '../components/ModelList/List';
 import OffersList from '../components/OffersList';
-import DetailsHeader from '../components/DetalisHeader';
+import DetailsHeader from '../components/DetailsHeader';
 
 const Details = () => {
   const { id } = useParams();
