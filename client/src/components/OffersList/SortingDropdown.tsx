@@ -10,7 +10,7 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 const SortingDropdown = () => {
   return (
     <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} >
         Sort By Price
       </MenuButton>
       <MenuList>

@@ -2,16 +2,19 @@ import { VStack, Tag, Text} from '@chakra-ui/react';
 import { Statistic } from '.';
 
 interface Props {
-  statistic: Statistic
+  statistic: Statistic;
+  color: number;
 }
 
+const colors = ["purple", "pink", "yellow"];
+
 const StatItem = (props: Props) => {
-  const { statistic } = props;
+  const { statistic, color } = props;
   const { label, value } = statistic;
 
   return (
     <VStack>
-      <Tag variant="subtle">{label}</Tag>
+      <Tag variant="subtle" colorScheme={colors[color]}>{label}</Tag>
       <Text>{value}</Text>
     </VStack>
   )

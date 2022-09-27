@@ -1,6 +1,7 @@
 import { 
-  Heading, 
-  Flex
+  Text, 
+  Flex,
+  chakra
 } from '@chakra-ui/react';
 import SortingDropdown from './SortingDropdown';
 import { allOffers } from '.';
@@ -8,12 +9,14 @@ import { allOffers } from '.';
 
 const Header = () => {
   return (
-    <header>
-      <Flex>
-        <Heading>All Offers ({allOffers.length})</Heading>
-        <SortingDropdown />
-      </Flex>
-    </header>
+    <chakra.header mb={6}>
+        <Flex alignItems={"center"} justifyContent={"space-between"}>
+          <Text fontSize={"lg"} fontWeight={700} fontFamily={"'Poppins', sans-serif"}>
+            All Offers ({allOffers.length})
+          </Text>
+          <SortingDropdown />
+        </Flex>
+    </chakra.header>
   )
 }
 

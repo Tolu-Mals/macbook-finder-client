@@ -1,5 +1,6 @@
 import Header from './Header';
 import List from './List';
+import { chakra, Container } from '@chakra-ui/react';
 
 export interface Statistic {
   label: string;
@@ -52,10 +53,12 @@ export const allOffers: Offer[] = [
 
 const index = () => {
   return (
-    <main>
-      <Header />
-      <List />
-    </main>
+    <chakra.main bg={"gray.50"} pt={6}>
+      <Container>
+        <Header />
+        <List />
+      </Container>
+    </chakra.main>
   )
 }
 

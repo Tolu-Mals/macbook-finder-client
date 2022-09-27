@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Details from './pages/Details';
 import '@fontsource/poppins/800.css';
 import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
 import '@fontsource/inter';
 
 const theme = extendTheme({

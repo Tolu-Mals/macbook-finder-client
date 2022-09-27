@@ -4,7 +4,7 @@ import { allOffers } from '.';
 
 const List = () => {
   return (
-    <Wrap>
+    <Wrap spacingY={4}>
       { allOffers.map((offer) => <ListItem offer={offer} key={offer.id} />) } 
     </Wrap>
   )
