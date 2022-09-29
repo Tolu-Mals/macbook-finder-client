@@ -1,5 +1,4 @@
-import { Flex, Link, IconButton, Box, chakra } from '@chakra-ui/react';
-import { SunIcon } from '@chakra-ui/icons';
+import { Flex, Link, chakra } from '@chakra-ui/react';
 
 const roundedBorder = (
   <chakra.div sx={{
@@ -28,8 +27,6 @@ const Navbar = () => {
           </Link>
           { roundedBorder }
         </Flex>
-
-        <IconButton aria-label="Toggle dark mode" icon={<SunIcon />} variant="link" size="lg"/>
 
         <Flex alignItems={"self-start"} flexDirection={"column"}>
           <Link 

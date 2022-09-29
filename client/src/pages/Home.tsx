@@ -1,6 +1,6 @@
 import Header from '../components/Header/Header';
 import ModelList from '../components/ModelList';
-import { Divider, useToast, chakra } from '@chakra-ui/react';
+import { Divider, useToast, Box } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import Reviews from '../components/Reviews/Reviews';
 
