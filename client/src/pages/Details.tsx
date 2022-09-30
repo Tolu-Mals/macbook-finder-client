@@ -1,12 +1,13 @@
+import * as React from 'react';
 import { useParams } from 'react-router-dom';
-import { allModels } from '../components/ModelList/List';
 import OffersList from '../components/OffersList';
 import DetailsHeader from '../components/DetailsHeader';
 import Reviews from '../components/Reviews/Reviews';
-
+import { ModelContext } from '../contexts/ModelContextProvider';
 const Details = () => {
   const { id } = useParams();
-  let modelData = allModels.find((model) => model.id === id);
+  const models = React.useContext(ModelContext);
+  let modelData = models.find((model) => model.id === id);
   const imageUrl = modelData ? modelData.image : undefined;
   const name = modelData ? modelData.name : undefined;
 

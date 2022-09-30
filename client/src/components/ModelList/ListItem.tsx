@@ -1,6 +1,6 @@
 import { WrapItem, Text, Box, Image, Link } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Model } from './List';
+import { Model } from '../../contexts/ModelContextProvider';
 
 interface Props {
     model: Model

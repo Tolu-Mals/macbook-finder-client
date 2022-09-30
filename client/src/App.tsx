@@ -9,6 +9,7 @@ import '@fontsource/poppins/800.css';
 import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import '@fontsource/inter';
+import ModelContextProvider from './contexts/ModelContextProvider';
 
 const theme = extendTheme({
   colors: {
@@ -28,9 +29,11 @@ const theme = extendTheme({
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/details/model-:id" element={<Details />} />
-    </Routes>
+    <ModelContextProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details/model-:id" element={<Details />} />
+      </Routes>
+    </ModelContextProvider>
   </ChakraProvider>
 )
