@@ -16,12 +16,13 @@ const Navbar = () => {
     >
         <Flex alignItems={"self-start"} flexDirection={"column"}>
           <Link 
-          href="#" 
+          href="https://twitter.com/tolulopemalomo" 
           fontFamily={"Poppins"}
           mb={1}
           _hover={{
             border: "none"
           }}
+          target="_blank"
           >
             Twitter
           </Link>
@@ -30,12 +31,13 @@ const Navbar = () => {
 
         <Flex alignItems={"self-start"} flexDirection={"column"}>
           <Link 
-          href="#"
+          href="https://github.com/Tolu-Mals"
           fontFamily={"Poppins"}
           mb={1}
           _hover={{
             border: "none"
           }}
+          target="_blank"
           >
             Github
           </Link>
