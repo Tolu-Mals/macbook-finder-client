@@ -4,12 +4,10 @@
       "id": "0",
       "name": "Apple MacBook Pro 14\" M1 Pro Chip 16GB RAM, 512GB (2021 Model)",
       "image": "https://user-images.githubusercontent.com/30352484/192323262-beca9eb5-3616-4010-99e8-33dfdd5cbcda.png",
-      "productDetails": {
-        "price": "₦1,000,000",
-        "starRating": 5,
-        "noOfReviews": 4
-      },
-      "sellerDetails": {
+      "price": "₦1,000,000",
+      "starRating": 5,
+      "noOfReviews": 4,
+      "seller": {
         "name": "Firenation computers",
         "followers": 114,
         "sellerScore": "80%",
@@ -22,12 +20,10 @@
       "id": "1",
       "name": "Apple MacBook Pro 14\" M1 Pro Chip 16GB RAM, 512GB (2021 Model)",
       "image": "https://user-images.githubusercontent.com/30352484/192323262-beca9eb5-3616-4010-99e8-33dfdd5cbcda.png",
-      "productDetails": {
-        "price": "₦1,000,000",
-        "starRating": 5,
-        "noOfReviews": 4
-      },
-      "sellerDetails": {
+      "price": "₦1,000,000",
+      "starRating": 5,
+      "noOfReviews": 4,
+      "seller": {
         "name": "Firenation computers",
         "followers": 114,
         "sellerScore": "80%",
@@ -40,12 +36,10 @@
       "id": "2",
       "name": "Apple MacBook Pro 14\" M1 Pro Chip 16GB RAM, 512GB (2021 Model)",
       "image": "https://user-images.githubusercontent.com/30352484/192323262-beca9eb5-3616-4010-99e8-33dfdd5cbcda.png",
-      "productDetails": {
-        "price": "₦1,000,000",
-        "starRating": 5,
-        "noOfReviews": 4
-      },
-      "sellerDetails": {
+      "price": "₦1,000,000",
+      "starRating": 5,
+      "noOfReviews": 4,
+      "seller": {
         "name": "Firenation computers",
         "followers": 114,
         "sellerScore": "80%",
@@ -58,12 +52,10 @@
       "id": "3",
       "name": "Apple MacBook Pro 14\" M1 Pro Chip 16GB RAM, 512GB (2021 Model)",
       "image": "https://user-images.githubusercontent.com/30352484/192323262-beca9eb5-3616-4010-99e8-33dfdd5cbcda.png",
-      "productDetails": {
-        "price": "₦1,000,000",
-        "starRating": 5,
-        "noOfReviews": 4
-      },
-      "sellerDetails": {
+      "price": "₦1,000,000",
+      "starRating": 5,
+      "noOfReviews": 4,
+      "seller": {
         "name": "Firenation computers",
         "followers": 114,
         "sellerScore": "80%",
@@ -76,12 +68,10 @@
       "id": "4",
       "name": "Apple MacBook Pro 14\" M1 Pro Chip 16GB RAM, 512GB (2021 Model)",
       "image": "https://user-images.githubusercontent.com/30352484/192323262-beca9eb5-3616-4010-99e8-33dfdd5cbcda.png",
-      "productDetails": {
-        "price": "₦1,000,000",
-        "starRating": 5,
-        "noOfReviews": 4
-      },
-      "sellerDetails": {
+      "price": "₦1,000,000",
+      "starRating": 5,
+      "noOfReviews": 4,
+      "seller": {
         "name": "Firenation computers",
         "followers": 114,
         "sellerScore": "80%",
@@ -94,12 +84,10 @@
       "id": "5",
       "name": "Apple MacBook Pro 14\" M1 Pro Chip 16GB RAM, 512GB (2021 Model)",
       "image": "https://user-images.githubusercontent.com/30352484/192323262-beca9eb5-3616-4010-99e8-33dfdd5cbcda.png",
-      "productDetails": {
-        "price": "₦1,000,000",
-        "starRating": 5,
-        "noOfReviews": 4
-      },
-      "sellerDetails": {
+      "price": "₦1,000,000",
+      "starRating": 5,
+      "noOfReviews": 4,
+      "seller": {
         "name": "Firenation computers",
         "followers": 114,
         "sellerScore": "80%",
@@ -110,4 +98,3 @@
     }
   ]
 }
-

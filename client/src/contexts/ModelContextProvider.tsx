@@ -4,6 +4,16 @@ export interface Model {
   id: string;
   name: string;
   image: string;
+  price: string;
+  starRating: number;
+  noOfReviews: number;
+  seller: {
+    name: string;
+    followers: number;
+    qualityScore: string;
+    customerRating: string;
+    orderFulfillmentRate: string;
+  }
 }
 
 interface Props {
