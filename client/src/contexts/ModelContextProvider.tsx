@@ -7,13 +7,17 @@ export interface Model {
   price: string;
   starRating: number;
   noOfReviews: number;
-  seller: {
-    name: string;
-    followers: number;
-    qualityScore: string;
-    customerRating: string;
-    orderFulfillmentRate: string;
-  }
+  url: string;
+  seller: Seller;
+}
+
+export interface Seller {
+  name: string;
+  followers: number;
+  sellerScore: string;
+  qualityScore: string;
+  customerRating: string;
+  orderFulfillmentRate: string;
 }
 
 interface Props {
