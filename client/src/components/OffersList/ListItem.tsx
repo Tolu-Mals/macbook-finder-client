@@ -10,7 +10,7 @@ const ListItem = (props: Props) => {
   const { offer } = props;
   const { statistics } = offer;
 
-  const formattedPrice = Intl.NumberFormat('en-US', { style: 'currency', currency: 'NGN', currencyDisplay: 'narrowSymbol' }).format(offer.price);
+  const { price } = offer;
 
   return (
     <WrapItem minH={"70px"} w={["100%", "100%", "350px", "375px"]}bg="white" p={4} borderRadius={8}>
@@ -34,7 +34,7 @@ const ListItem = (props: Props) => {
           marginBottom: 3
         }}
         >
-          {formattedPrice}
+          {price}
         </Text>
 
         <StatList statistics={statistics} />
