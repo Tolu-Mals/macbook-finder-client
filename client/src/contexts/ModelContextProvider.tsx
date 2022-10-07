@@ -1,23 +1,23 @@
 import * as React from 'react';
 
 export interface Model {
-  id: string;
-  name: string;
-  image: string;
-  price: string;
-  starRating: number;
-  noOfReviews: number;
-  url: string;
-  seller: Seller;
+  id?: string;
+  name?: string;
+  image?: string;
+  price?: string;
+  starRating?: number | string;
+  noOfReviews?: number | string;
+  url?: string;
+  seller?: Seller;
 }
 
 export interface Seller {
-  name: string;
-  followers: number;
-  sellerScore: string;
-  qualityScore: string;
-  customerRating: string;
-  orderFulfillmentRate: string;
+  name?: string;
+  followers?: number;
+  sellerScore?: string;
+  qualityScore?: string;
+  customerRating?: string;
+  orderFulfillmentRate?: string;
 }
 
 interface Props {
