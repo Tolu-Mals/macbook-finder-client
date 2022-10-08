@@ -24,6 +24,7 @@ const ListItem = (props: Props) => {
             alignItems={"center"}
             borderRadius={8}
             w="100%"
+            h="100%"
             >
                 <Box sx={{
                     flex: 1
@@ -36,6 +37,7 @@ const ListItem = (props: Props) => {
                     fontSize: ["sm","md"],
                     fontFamily: '"Poppins", sans-serif',
                 }}
+                noOfLines={3}
                 >
                     {model.name}
                 </Text>
