@@ -7,8 +7,8 @@ import { ModelContext, Model } from '../contexts/ModelContextProvider';
 
 export interface Details {
   price?: string;
-  starRating?: number;
-  noOfReviews?: number;
+  starRating?: number | string;
+  noOfReviews?: number | string;
   url?: string;
   seller?: {
     name?: string;
@@ -33,8 +33,8 @@ const Details = () => {
     noOfReviews: modelData?.noOfReviews,
     url: modelData?.url,
     seller: {
-      name: modelData?.seller.name,
-      followers: modelData?.seller.followers,
+      name: modelData?.seller?.name,
+      followers: modelData?.seller?.followers,
       sellerScore: modelData?.seller?.sellerScore,
       qualityScore: modelData?.seller?.qualityScore,
       customerRating: modelData?.seller?.customerRating,
