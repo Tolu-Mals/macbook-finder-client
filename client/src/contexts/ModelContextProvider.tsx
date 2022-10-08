@@ -32,13 +32,15 @@ const ModelContextProvider = ({ children }: Props) => {
 
   React.useEffect(() => {
     const getModels = async () => {
-      const res = await fetch('http://localhost:3000/models');
+      const res = await fetch('http://localhost:8000/macbooks');
   
       //Check if the fetch was successful
       if(res.status !== 200) throw new Error('Could not fetch models');
   
-      const models = await res.json();
-      setModels(models);
+      const data = await res.json();
+      let { macbooks } = data;
+      macbooks = JSON.parse(macbooks);
+      setModels(macbooks);
     };
 
     getModels();
