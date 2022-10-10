@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Timestamp } from 'firebase/firestore';
 
 export interface Model {
   id?: string;
@@ -26,18 +27,21 @@ interface Props {
 
 export interface State {
   isLoading: boolean;
-  models: Model[]
+  models: Model[];
+  lastUpdated: string;
 }
 
 const intialState: State = {
   isLoading: false,
-  models: []
+  models: [],
+  lastUpdated: '',
 }
 export const ModelContext = React.createContext(intialState);
 
 const ModelContextProvider = ({ children }: Props) => {
   const [ models, setModels ] = React.useState<Model[]>([]);
   const [ isLoading, setIsLoading ] = React.useState<boolean>(false);
+  const [ lastUpdated, setLastUpdated ] = React.useState<string>('');
 
   React.useEffect(() => {
     const getModels = async () => {
@@ -49,11 +53,12 @@ const ModelContextProvider = ({ children }: Props) => {
         setIsLoading(false);
         throw new Error('Could not fetch models');
       } else {
-        const data = await res.json();
-        let { macbooks } = data;
-        macbooks = JSON.parse(macbooks);
+        let data = await res.json();
+        let { macbookData } = data;
+        const { macbooks, created } = macbookData;
         setIsLoading(false);
-        setModels(macbooks);
+        setModels(JSON.parse(macbooks));
+        setLastUpdated(new Timestamp(created._seconds, created._nanoseconds).toDate().toLocaleDateString());
       }
     };
 
@@ -61,7 +66,7 @@ const ModelContextProvider = ({ children }: Props) => {
   }, []);
 
   return (
-    <ModelContext.Provider value={{ isLoading, models }}>
+    <ModelContext.Provider value={{ isLoading, models, lastUpdated }}>
       { children }
     </ModelContext.Provider>
   )

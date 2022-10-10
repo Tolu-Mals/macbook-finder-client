@@ -29,13 +29,13 @@ const index = (props: Props) => {
     <chakra.main bg={"gray.50"} py={4}>
       <Container maxW="1200px">
         <Flex flexDirection={{ base: 'column', md: 'row' }} gap={{ base: '0', md: 4 }}>
-          <Flex flexDirection={"column"} flex={1}>
+          <Flex flexDirection={"column"} flex={1} mb={4}>
             <HStack mb={3}>
               <Box w="15%" mr={2}><Image src={boxImg} alt="Box illustration"/></Box>
-              <Heading size="lg">Product Details</Heading>
+              <Heading size={{ base: 'md', lg: 'lg' }}>Product Details</Heading>
             </HStack>
             <Text sx={leadTextStyle}>Here’s what you need to know about this product offer to help you make your best buying decision</Text>
-            <Flex w="100%" flexDirection={{ base: 'column', md: 'row' }} alignItems={"flex-start"}>
+            <Flex w="100%" flexDirection={{ base: 'column', md: 'row' }} alignItems={"flex-start"} mb={8}>
               <StatItem statistic={{ label: "Price", value: details?.price}} />
               <Flex>
                 <StatItem statistic={{ label: "Star Rating", value: details?.starRating }}/>
@@ -59,7 +59,7 @@ const index = (props: Props) => {
           <Flex flexDirection="column" flex={1}>
             <HStack mt={3} w="100%">
               <Box w="15%" mr={2}><Image src={badgeImg} alt="Badge illustration"/></Box>
-              <Heading size="lg">Seller Information</Heading>
+              <Heading size={{ base: 'md', lg: 'lg' }}>Seller Information</Heading>
             </HStack>
             <Text sx={leadTextStyle}>Take a look at some useful information about the person who is selling this product</Text>
             <Flex flexDirection={{ base: 'row' }} w="100%">

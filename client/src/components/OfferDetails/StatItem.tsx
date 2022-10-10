@@ -14,14 +14,15 @@ const StatItem = ({ statistic }: Props) => {
 
   const labelStyle = {
     color: 'gray.400',
-    fontSize: 'md',
+    fontSize: { base: 'sm', lg: 'md' },
     fontFamily: '"Poppins", sans-serif',
     fontWeight: 400,
   }
 
 
   const valueStyle = {
-    fontSize: typeof value === 'number' || label === 'Price' || label === 'Star Rating' ? '4xl' : '2xl',
+    // fontSize: ( typeof value === 'number' ) || ( label === 'Price' ) || ( label === 'Star Rating' && value !== 'nil' ) ? '3xl' : '2xl',
+    fontSize: '2xl',
     fontWeight: 700,
     fontFamily: '"Poppins", sans-serif',
   }

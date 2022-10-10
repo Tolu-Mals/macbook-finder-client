@@ -11,7 +11,13 @@ const index = (props: Props) => {
 
   const productImageComp = (
     <Box mb={4} flex={[1,1,0.5]}>
-      <Image src={imageUrl} />
+      <Box sx={{
+        h: '245px',
+        w: '288px',
+        overflow: 'hidden',
+      }}>
+        <Image src={imageUrl} />
+      </Box>
     </Box>
   );
 
@@ -30,7 +36,7 @@ const index = (props: Props) => {
               }}>Product Model</Text>
               <Heading 
               as="h1"
-              size={["sm","md", "md", "lg"]}
+              size={["md","md", "md", "lg"]}
               sx={{
                 textAlign: ['center', 'left', 'left'],
                 fontWeight: 700,

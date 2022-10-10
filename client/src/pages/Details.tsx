@@ -43,6 +43,10 @@ const Details = () => {
     }
   }
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <div>
         <DetailsHeader imageUrl={imageUrl} name={name} />
