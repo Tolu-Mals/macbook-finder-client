@@ -18,6 +18,7 @@ const Navbar = () => {
           <Link 
           href="https://twitter.com/tolulopemalomo" 
           fontFamily={"Poppins"}
+          fontWeight={600}
           mb={1}
           _hover={{
             border: "none"
@@ -32,6 +33,7 @@ const Navbar = () => {
         <Flex alignItems={"self-start"} flexDirection={"column"}>
           <Link 
           href="https://github.com/Tolu-Mals"
+          fontWeight={600}
           fontFamily={"Poppins"}
           mb={1}
           _hover={{

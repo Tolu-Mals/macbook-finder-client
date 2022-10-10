@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import OfferDetails from '../components/OfferDetails';
 import DetailsHeader from '../components/DetailsHeader';
 import Reviews from '../components/Reviews/Reviews';
-import { ModelContext, Model } from '../contexts/ModelContextProvider';
+import { ModelContext } from '../contexts/ModelContextProvider';
+import { State } from '../contexts/ModelContextProvider';
 
 export interface Details {
   price?: string;
@@ -22,7 +23,7 @@ export interface Details {
 
 const Details = () => {
   const { id } = useParams();
-  const models = React.useContext<Model[]>(ModelContext);
+  const { models } = React.useContext<State>(ModelContext);
   let modelData = models.find((model) => model.id === id);
   const imageUrl = modelData ? modelData.image : undefined;
   const name = modelData ? modelData.name : undefined;
