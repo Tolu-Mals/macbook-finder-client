@@ -12,9 +12,12 @@ const index = (props: Props) => {
   const productImageComp = (
     <Box mb={4} flex={[1,1,0.5]}>
       <Box sx={{
-        h: '245px',
+        h: '200px',
         w: '288px',
         overflow: 'hidden',
+        'img': {
+          marginTop: '-40px'
+        }
       }}>
         <Image src={imageUrl} />
       </Box>
