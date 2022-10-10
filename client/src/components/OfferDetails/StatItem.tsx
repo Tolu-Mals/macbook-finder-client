@@ -19,8 +19,9 @@ const StatItem = ({ statistic }: Props) => {
     fontWeight: 400,
   }
 
+
   const valueStyle = {
-    fontSize: typeof value === "number" || label === "Price" ? '4xl': 'lg',
+    fontSize: typeof value === 'number' || label === 'Price' || label === 'Star Rating' ? '4xl' : '2xl',
     fontWeight: 700,
     fontFamily: '"Poppins", sans-serif',
   }
