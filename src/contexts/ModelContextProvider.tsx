@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Timestamp } from 'firebase/firestore';
 
 export interface Model {
   id?: string;
@@ -54,11 +53,10 @@ const ModelContextProvider = ({ children }: Props) => {
         throw new Error('Could not fetch models');
       } else {
         let data = await res.json();
-        let { macbookData } = data;
-        const { macbooks, created } = macbookData;
+        let { macbooks, created } = data;
         setIsLoading(false);
         setModels(JSON.parse(macbooks));
-        setLastUpdated(new Timestamp(created._seconds, created._nanoseconds).toDate().toLocaleDateString());
+        setLastUpdated(new Date(created).toLocaleDateString());
       }
     };
 
