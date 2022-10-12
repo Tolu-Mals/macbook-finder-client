@@ -32,7 +32,7 @@ const Navbar = () => {
 
         <Flex alignItems={"self-start"} flexDirection={"column"}>
           <Link 
-          href="https://github.com/Tolu-Mals"
+          href="https://gist.github.com/Tolu-Mals/5ddb48862f99e82b820d0d0762e75558"
           fontWeight={600}
           fontFamily={"Poppins"}
           mb={1}
