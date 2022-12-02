@@ -45,7 +45,7 @@ const ModelContextProvider = ({ children }: Props) => {
   React.useEffect(() => {
     const getModels = async () => {
       setIsLoading(true);
-      const res = await fetch('https://macbook-finder-server-production.up.railway.app/macbooks');
+      const res = await fetch('https://wild-plum-mackerel.cyclic.app/macbooks');
   
       //Check if the fetch was successful
       if(res.status !== 200){
