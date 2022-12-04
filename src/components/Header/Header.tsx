@@ -34,7 +34,7 @@ const Header = () => {
             pb={3}
             fontSize={["0.9rem", "1rem"]}
             >
-              Get the best deal on Macbooks from Jumia using info from our custom web crawler.</Text>
+              Get the best deal on Macbooks from Jumia using info from our custom node.js web crawler.</Text>
             <Button 
             bg="brand.300" 
             fontFamily={"heading"}
