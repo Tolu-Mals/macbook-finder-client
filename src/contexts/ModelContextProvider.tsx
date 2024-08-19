@@ -38,17 +38,17 @@ const intialState: State = {
 export const ModelContext = React.createContext(intialState);
 
 const ModelContextProvider = ({ children }: Props) => {
-  const [ models, setModels ] = React.useState<Model[]>([]);
-  const [ isLoading, setIsLoading ] = React.useState<boolean>(false);
-  const [ lastUpdated, setLastUpdated ] = React.useState<string>('');
+  const [models, setModels] = React.useState<Model[]>([]);
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const [lastUpdated, setLastUpdated] = React.useState<string>('');
 
   React.useEffect(() => {
     const getModels = async () => {
       setIsLoading(true);
-      const res = await fetch('https://wild-plum-mackerel.cyclic.app/macbooks');
-  
+      const res = await fetch('http://localhost:4000/macbooks');
+
       //Check if the fetch was successful
-      if(res.status !== 200){
+      if (res.status !== 200) {
         setIsLoading(false);
         throw new Error('Could not fetch models');
       } else {
@@ -65,7 +65,7 @@ const ModelContextProvider = ({ children }: Props) => {
 
   return (
     <ModelContext.Provider value={{ isLoading, models, lastUpdated }}>
-      { children }
+      {children}
     </ModelContext.Provider>
   )
 }

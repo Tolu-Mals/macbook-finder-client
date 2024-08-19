@@ -25,6 +25,7 @@ const Details = () => {
   const { id } = useParams();
   const { models } = React.useContext<State>(ModelContext);
   let modelData = models.find((model) => model.id === id);
+  console.log("Models: ", models)
   const imageUrl = modelData ? modelData.image : undefined;
   const name = modelData ? modelData.name : undefined;
 
@@ -49,9 +50,9 @@ const Details = () => {
 
   return (
     <div>
-        <DetailsHeader imageUrl={imageUrl} name={name} />
-        <OfferDetails details={details}/>
-        <Reviews />
+      <DetailsHeader imageUrl={imageUrl} name={name} />
+      <OfferDetails details={details} />
+      <Reviews />
     </div>
   )
 }
