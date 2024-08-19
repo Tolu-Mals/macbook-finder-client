@@ -12,39 +12,41 @@ const roundedBorder = (
 const Navbar = () => {
   return (
     <Flex
-    justifyContent="space-between"
+      justifyContent="space-between"
     >
-        <Flex alignItems={"self-start"} flexDirection={"column"}>
-          <Link 
-          href="https://twitter.com/tolulopemalomo" 
+      <Flex alignItems={"self-start"} flexDirection={"column"}>
+        <Link
+          href="https://twitter.com/tolulopemalomo"
           fontFamily={"Poppins"}
           fontWeight={600}
           mb={1}
+          color="gray.800"
           _hover={{
             border: "none"
           }}
           target="_blank"
-          >
-            Twitter
-          </Link>
-          { roundedBorder }
-        </Flex>
+        >
+          Twitter
+        </Link>
+        {roundedBorder}
+      </Flex>
 
-        <Flex alignItems={"self-start"} flexDirection={"column"}>
-          <Link 
+      <Flex alignItems={"self-start"} flexDirection={"column"}>
+        <Link
           href="https://gist.github.com/Tolu-Mals/5ddb48862f99e82b820d0d0762e75558"
           fontWeight={600}
+          color="gray.800"
           fontFamily={"Poppins"}
           mb={1}
           _hover={{
             border: "none"
           }}
           target="_blank"
-          >
-            Github
-          </Link>
-          { roundedBorder }
-        </Flex>
+        >
+          Github
+        </Link>
+        {roundedBorder}
+      </Flex>
     </Flex>
   )
 }

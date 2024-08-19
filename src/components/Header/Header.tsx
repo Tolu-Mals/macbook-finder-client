@@ -8,35 +8,36 @@ const Header = () => {
       <Container maxW="1200px">
         <Navbar />
         <Center
-        flexDirection={"column"}
-        textAlign={"center"}
-        w={["100%","60%", "50%", "37%"]}
-        ml={"auto"}
-        mr={"auto"}
-        pt={8}
-        pb={14}
+          flexDirection={"column"}
+          textAlign={"center"}
+          w={["100%", "60%", "50%", "37%"]}
+          ml={"auto"}
+          mr={"auto"}
+          pt={8}
+          pb={14}
         >
-            <Center w={"50%"} pb={3}>
-                <Image src={FinderLogo} />
-            </Center>
-            <Heading 
+          <Center w={"50%"} pb={3}>
+            <Image src={FinderLogo} />
+          </Center>
+          <Heading
             as="h1"
             fontWeight={800}
             fontSize={["2rem", "2.5rem",]}
+            color="gray.800"
             pb={2}
-            >
-              Macbook Finder
-            </Heading>
-            <Text
+          >
+            Macbook Finder
+          </Heading>
+          <Text
             fontFamily={"heading"}
             fontWeight={600}
             color="gray.400"
             pb={3}
             fontSize={["0.9rem", "1rem"]}
-            >
-              Get the best deal on Macbooks from Jumia using info from our custom node.js web crawler.</Text>
-            <Button 
-            bg="brand.300" 
+          >
+            Get the best deal on Macbooks from Jumia using info from our custom node.js web crawler.</Text>
+          <Button
+            bg="brand.300"
             fontFamily={"heading"}
             color="white"
             size="lg"
@@ -48,9 +49,9 @@ const Header = () => {
             fontSize={["0.9rem", "1rem",]}
             as="a"
             href="#models"
-            >
-              Find a Macbook
-            </Button>
+          >
+            Find a Macbook
+          </Button>
         </Center>
       </Container>
     </chakra.header>
