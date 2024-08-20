@@ -25,7 +25,7 @@ const Details = () => {
   const { id } = useParams();
   const { models } = React.useContext<State>(ModelContext);
   let modelData = models.find((model) => model.id === id);
-  console.log("Models: ", models)
+  console.log("modelData: ", modelData)
   const imageUrl = modelData ? modelData.image : undefined;
   const name = modelData ? modelData.name : undefined;
 

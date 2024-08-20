@@ -15,10 +15,10 @@ const index = (props: Props) => {
   const leadTextStyle = {
     fontFamily: '"Poppins", sans-serif',
     fontWeight: 400,
-    color: 'gray.400',
+    color: 'gray.600',
     fontSize: 'sm',
     marginBottom: 6,
-    width: { base: 'auto', md: '80%'}
+    width: { base: 'auto', md: '80%' }
   }
 
   const linkIconComp = (
@@ -31,47 +31,47 @@ const index = (props: Props) => {
         <Flex flexDirection={{ base: 'column', md: 'row' }} gap={{ base: '0', md: 4 }}>
           <Flex flexDirection={"column"} flex={1} mb={4}>
             <HStack mb={3}>
-              <Box w="15%" mr={2}><Image src={boxImg} alt="Box illustration"/></Box>
-              <Heading size={{ base: 'md', lg: 'lg' }}>Product Details</Heading>
+              <Box w="15%" mr={2}><Image src={boxImg} alt="Box illustration" /></Box>
+              <Heading size={{ base: 'md', lg: 'lg' }} color="gray.800">Product Details</Heading>
             </HStack>
             <Text sx={leadTextStyle}>Here’s what you need to know about this product offer to help you make your best buying decision</Text>
             <Flex w="100%" flexDirection={{ base: 'column', md: 'row' }} alignItems={"flex-start"} mb={8}>
-              <StatItem statistic={{ label: "Price", value: details?.price}} />
+              <StatItem statistic={{ label: "Price", value: details?.price }} />
               <Flex>
-                <StatItem statistic={{ label: "Star Rating", value: details?.starRating }}/>
-                <StatItem statistic={{ label: "Reviews", value: details?.noOfReviews }}/>
+                <StatItem statistic={{ label: "Star Rating", value: details?.starRating }} />
+                <StatItem statistic={{ label: "Reviews", value: details?.noOfReviews }} />
               </Flex>
             </Flex>
-            <Button 
-            as='a' 
-            href={details.url} 
-            variant="link" 
-            rightIcon={linkIconComp} 
-            color={"#5296FF"} 
-            size="lg"
-            my={4}
-            mr={'auto'}
-            mt={'auto'}
+            <Button
+              as='a'
+              href={details.url}
+              variant="link"
+              rightIcon={linkIconComp}
+              color={"#5296FF"}
+              size="lg"
+              my={4}
+              mr={'auto'}
+              mt={'auto'}
             >
               See on Jumia
             </Button>
           </Flex>
           <Flex flexDirection="column" flex={1}>
             <HStack mt={3} w="100%">
-              <Box w="15%" mr={2}><Image src={badgeImg} alt="Badge illustration"/></Box>
-              <Heading size={{ base: 'md', lg: 'lg' }}>Seller Information</Heading>
+              <Box w="15%" mr={2}><Image src={badgeImg} alt="Badge illustration" /></Box>
+              <Heading size={{ base: 'md', lg: 'lg' }} color="gray.800">Seller Information</Heading>
             </HStack>
             <Text sx={leadTextStyle}>Take a look at some useful information about the person who is selling this product</Text>
             <Flex flexDirection={{ base: 'row' }} w="100%">
               <Flex flexDirection={{ base: 'column' }} flex={1}>
-                <StatItem statistic={{ label: "Name", value: details?.seller?.name }}/>
-                <StatItem statistic={{ label: "Followers", value: details?.seller?.followers }}/>
-                <StatItem statistic={{ label: "Seller Score", value: details?.seller?.sellerScore }}/>
+                <StatItem statistic={{ label: "Name", value: details?.seller?.name }} />
+                <StatItem statistic={{ label: "Followers", value: details?.seller?.followers }} />
+                <StatItem statistic={{ label: "Seller Score", value: details?.seller?.sellerScore }} />
               </Flex>
               <Flex flexDirection={{ base: 'column' }} flex={1}>
-                <StatItem statistic={{ label: "Quality Score", value: details?.seller?.qualityScore }}/>
-                <StatItem statistic={{ label: "Customer Rating", value: details?.seller?.customerRating }}/>
-                <StatItem statistic={{ label: "Order Fulfillment Rate", value: details?.seller?.orderFulfillmentRate }}/>
+                <StatItem statistic={{ label: "Quality Score", value: details?.seller?.qualityScore }} />
+                <StatItem statistic={{ label: "Customer Rating", value: details?.seller?.customerRating }} />
+                <StatItem statistic={{ label: "Order Fulfillment Rate", value: details?.seller?.orderFulfillmentRate }} />
               </Flex>
             </Flex>
           </Flex>

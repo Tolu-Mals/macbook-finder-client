@@ -44,7 +44,7 @@ const Header = () => {
             borderRadius={25}
             px={8}
             _hover={{
-              backgroundColor: 'brand.100'
+              backgroundColor: 'brand.400'
             }}
             fontSize={["0.9rem", "1rem",]}
             as="a"

@@ -4,6 +4,7 @@ import { ModelContext } from '../../contexts/ModelContextProvider';
 
 const Header = () => {
   const { lastUpdated } = React.useContext(ModelContext);
+  console.log("last updated: ", lastUpdated)
 
   return (
     <chakra.header mb={2} id="models">
@@ -11,7 +12,7 @@ const Header = () => {
         <Heading size={["sm", "md"]} color="gray.800">List of Models</Heading>
         <chakra.div textAlign={"right"}>
           <Text fontSize={["xs", "sm"]} fontWeight={600} fontFamily={"'Poppins', sans-serif"} color="gray.400">Last Updated</Text>
-          <Text fontSize={["sm", "md"]} fontWeight={600} fontFamily={"'Poppins', sans-serif"}>{lastUpdated}</Text>
+          <Text fontSize={["sm", "md"]} fontWeight={600} fontFamily={"'Poppins', sans-serif"} color="gray.800">{lastUpdated}</Text>
         </chakra.div>
       </Flex>
     </chakra.header>

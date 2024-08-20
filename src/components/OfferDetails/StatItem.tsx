@@ -21,16 +21,16 @@ const StatItem = ({ statistic }: Props) => {
 
 
   const valueStyle = {
-    // fontSize: ( typeof value === 'number' ) || ( label === 'Price' ) || ( label === 'Star Rating' && value !== 'nil' ) ? '3xl' : '2xl',
-    fontSize: '2xl',
+    fontSize: 'xl',
     fontWeight: 700,
     fontFamily: '"Poppins", sans-serif',
+    color: 'gray.600'
   }
 
   return (
     <chakra.div mr={8} mb={4}>
       <Text sx={labelStyle}>{label}</Text>
-      <Text sx={valueStyle}>{value}</Text>
+      <Text sx={valueStyle}>{Boolean(value) ? value : 'Not available'}</Text>
     </chakra.div>
   )
 }
