@@ -53,10 +53,9 @@ const ModelContextProvider = ({ children }: Props) => {
         throw new Error('Could not fetch models');
       } else {
         let data = await res.json();
-        let { macbooks, created } = data;
         setIsLoading(false);
-        setModels(JSON.parse(macbooks));
-        setLastUpdated(new Date(created).toLocaleDateString());
+        setModels(data);
+        setLastUpdated(new Date(data[0].createdAt).toLocaleDateString());
       }
     };
 
