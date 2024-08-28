@@ -4,6 +4,7 @@ import boxImg from '../../assets/images/box.png';
 import badgeImg from '../../assets/images/badge.png';
 import StatItem from './StatItem';
 import { Details } from '../../pages/Details';
+import formatNumberAsNaira from '../../utils/formatNumberAsNaira'
 
 interface Props {
   details: Details
@@ -36,10 +37,10 @@ const index = (props: Props) => {
             </HStack>
             <Text sx={leadTextStyle}>Here’s what you need to know about this product offer to help you make your best buying decision</Text>
             <Flex w="100%" flexDirection={{ base: 'column', md: 'row' }} alignItems={"flex-start"} mb={8}>
-              <StatItem statistic={{ label: "Price", value: details?.price }} />
+              <StatItem statistic={{ label: "Price", value: details?.price ? formatNumberAsNaira(details.price) : '' }} />
               <Flex>
-                <StatItem statistic={{ label: "Star Rating", value: details?.starRating }} />
-                <StatItem statistic={{ label: "Reviews", value: details?.noOfReviews }} />
+                <StatItem statistic={{ label: "Star Rating", value: details?.starRating ?? 'Nil' }} />
+                <StatItem statistic={{ label: "Reviews", value: details?.noOfReviews ?? 'Nil' }} />
               </Flex>
             </Flex>
             <Button

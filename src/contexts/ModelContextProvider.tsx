@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 export interface Model {
-  id?: string;
+  _id?: string;
   name?: string;
   image?: string;
-  price?: string;
-  starRating?: number | string;
-  noOfReviews?: number | string;
+  price?: number;
+  starRating?: number;
+  noOfReviews?: number;
   url?: string;
   seller?: Seller;
 }

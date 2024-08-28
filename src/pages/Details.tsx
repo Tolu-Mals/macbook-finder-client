@@ -7,7 +7,7 @@ import { ModelContext } from '../contexts/ModelContextProvider';
 import { State } from '../contexts/ModelContextProvider';
 
 export interface Details {
-  price?: string;
+  price?: number;
   starRating?: number | string;
   noOfReviews?: number | string;
   url?: string;
@@ -24,8 +24,7 @@ export interface Details {
 const Details = () => {
   const { id } = useParams();
   const { models } = React.useContext<State>(ModelContext);
-  let modelData = models.find((model) => model.id === id);
-  console.log("modelData: ", modelData)
+  let modelData = models.find((model) => model._id === id);
   const imageUrl = modelData ? modelData.image : undefined;
   const name = modelData ? modelData.name : undefined;
 
