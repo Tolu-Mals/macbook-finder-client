@@ -27,10 +27,10 @@ const index = (props: Props) => {
   const { details, isLoading } = props;
 
   const leadTextStyle = {
-    fontFamily: '"Poppins", sans-serif',
-    fontWeight: 400,
-    color: 'gray.600',
-    fontSize: 'sm',
+    fontFamily: '"Inter", sans-serif',
+    fontWeight: 500,
+    color: 'gray.500',
+    fontSize: 'md',
     marginBottom: 6,
     width: { base: 'auto', md: '80%' }
   }
@@ -121,7 +121,7 @@ const index = (props: Props) => {
                   <Box w="15%" mr={2}><Image src={badgeImg} alt="Badge illustration" /></Box>
                   <Heading size={{ base: 'md', lg: 'lg' }} color="gray.800">Seller Information</Heading>
                 </HStack>
-                <Text sx={leadTextStyle}>Take a look at some useful information about the person who is selling this product</Text>
+                <Text sx={leadTextStyle}>Here's some useful information about the person who is selling this product</Text>
                 <Flex flexDirection={{ base: 'row' }} w="100%">
                   <Flex flexDirection={{ base: 'column' }} flex={1}>
                     <StatItem statistic={{ label: "Name", value: details?.seller?.name }} />
