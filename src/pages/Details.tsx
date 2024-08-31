@@ -21,7 +21,7 @@ export interface Details {
   }
 }
 
-const Details = () => {
+const DetailsPage = () => {
   const { id } = useParams();
   const { macbooks } = React.useContext<ModelState>(ModelContext);
   let modelData = macbooks.find((model) => model._id === id);
@@ -56,4 +56,4 @@ const Details = () => {
   )
 }
 
-export default Details;
+export default DetailsPage;

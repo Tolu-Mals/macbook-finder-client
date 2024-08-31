@@ -1,6 +1,6 @@
 import Header from '../components/Header/Header';
 import ModelList from '../components/ModelList';
-import { Divider, useToast, Box } from '@chakra-ui/react';
+import { Divider, useToast } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import Reviews from '../components/Reviews/Reviews';
 
@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     const toastTimeoutId = setTimeout(() => {
-      if(!isOnBoarded){
+      if (!isOnBoarded) {
         toast({
           title: 'Inspired by my obsession with Macbooks 😂',
           description: "Let's find one for you!",
@@ -26,7 +26,7 @@ const Home = () => {
     return () => {
       clearTimeout(toastTimeoutId);
     }
-  }, []);
+  }, [toast]);
 
   return (
     <div>

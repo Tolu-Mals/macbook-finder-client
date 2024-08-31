@@ -1,4 +1,4 @@
-import { chakra, Container, Flex, Box, Image, HStack, VStack, Heading, Text, Button, Center } from '@chakra-ui/react';
+import { chakra, Container, Flex, Box, Image, HStack, Heading, Text, Button, Center } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import boxImg from '../../assets/images/box.png';
 import badgeImg from '../../assets/images/badge.png';

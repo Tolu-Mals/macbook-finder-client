@@ -69,10 +69,15 @@ const ModelContextProvider = ({ children }: Props) => {
     };
 
     getModels();
-  }, []);
+  }, [page]);
 
+  const contextValue = {
+    isLoading,
+    ...modelData,
+    lastUpdated: modelData?.macbooks?.at(0)?.lastUpdated ?? '',
+  }
   return (
-    <ModelContext.Provider value={{ isLoading, macbooks: modelData.macbooks, lastUpdated: modelData?.macbooks?.at(0)?.lastUpdated ?? '', total: modelData.total }}>
+    <ModelContext.Provider value={contextValue}>
       {children}
     </ModelContext.Provider>
   )
