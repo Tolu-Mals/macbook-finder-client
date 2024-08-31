@@ -29,7 +29,7 @@ const Home = () => {
   }, [toast]);
 
   return (
-    <Box bg="blue.800">
+    <Box bg="gray.700">
       <Header />
       <ModelList />
       <Divider />

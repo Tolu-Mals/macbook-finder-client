@@ -13,8 +13,16 @@ const Reviews = () => {
       }}>Feel free to let me know what you think about Macbook finder</Text>
 
       <form action="https://formsubmit.co/malomo.tolz@gmail.com" method='POST'>
-        <Textarea borderColor="gray.500" _hover={{ borderColor: 'gray.400' }} _placeholder={{ color: 'gray.500' }} placeholder="Type your thoughts here" mb={4} name="Review" />
-        <Button type="submit" colorScheme="twitter">Send Review</Button>
+        <Textarea w="50%" borderColor="gray.500" backgroundColor="gray.600" py="15px" _hover={{ borderColor: 'gray.400' }} _placeholder={{ color: 'gray.500' }} placeholder="Type your thoughts here" mb={4} name="Review" />
+        <br />
+        <Button type="submit"
+          colorScheme="twitter"
+          fontFamily={"heading"}
+          size="lg"
+          px={8}
+          fontSize={["0.9rem", "1rem",]}
+
+        >Send Review</Button>
       </form>
 
     </Container>

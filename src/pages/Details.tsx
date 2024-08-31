@@ -56,7 +56,7 @@ const DetailsPage = () => {
 
 
   return (
-    <chakra.div bg="blue.800">
+    <chakra.div bg="gray.700">
       <DetailsHeader isLoading={isLoading} imageUrl={details?.image} name={details?.name} />
       <OfferDetails isLoading={isLoading} details={details} />
       <Reviews />
