@@ -53,7 +53,6 @@ const ModelContextProvider = ({ children }: Props) => {
   React.useEffect(() => {
     const getModels = async () => {
       setIsLoading(true);
-      console.log("api: ", API_URL)
       const url = buildUrl(API_URL as string, '/macbooks', { page: String(page) })
       const res = await fetch(url)
 
@@ -69,12 +68,11 @@ const ModelContextProvider = ({ children }: Props) => {
     };
 
     getModels();
-  }, [page]);
+  }, [searchParams]);
 
   const contextValue = {
-    isLoading,
     ...modelData,
-    lastUpdated: modelData?.macbooks?.at(0)?.lastUpdated ?? '',
+    isLoading,
   }
   return (
     <ModelContext.Provider value={contextValue}>

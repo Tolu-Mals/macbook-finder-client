@@ -33,7 +33,7 @@ export const App = () => (
     <ModelContextProvider>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/details/model-:id" element={<Details />} />
+        <Route path="/details/model/:id" element={<Details />} />
       </Routes>
     </ModelContextProvider>
   </ChakraProvider>

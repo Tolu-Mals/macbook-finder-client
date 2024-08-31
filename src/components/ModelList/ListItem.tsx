@@ -13,7 +13,7 @@ const ListItem = (props: Props) => {
     <WrapItem minH={"70px"} w={["100%", "100%", "100%", "375px"]}>
       <Link
         as={RouterLink}
-        to={`/details/model-${model._id}`}
+        to={`/details/model/${model._id}`}
         _hover={{
           border: "none"
         }}
