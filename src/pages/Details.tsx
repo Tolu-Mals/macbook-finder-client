@@ -4,7 +4,7 @@ import OfferDetails from '../components/OfferDetails';
 import DetailsHeader from '../components/DetailsHeader';
 import Reviews from '../components/Reviews/Reviews';
 import { ModelContext } from '../contexts/ModelContextProvider';
-import { State } from '../contexts/ModelContextProvider';
+import { ModelState } from '../contexts/ModelContextProvider';
 
 export interface Details {
   price?: number;
@@ -23,8 +23,8 @@ export interface Details {
 
 const Details = () => {
   const { id } = useParams();
-  const { models } = React.useContext<State>(ModelContext);
-  let modelData = models.find((model) => model._id === id);
+  const { macbooks } = React.useContext<ModelState>(ModelContext);
+  let modelData = macbooks.find((model) => model._id === id);
   const imageUrl = modelData ? modelData.image : undefined;
   const name = modelData ? modelData.name : undefined;
 

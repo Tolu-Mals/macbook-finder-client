@@ -1,4 +1,13 @@
 import * as React from 'react';
+import { useSearchParams } from 'react-router-dom'
+import buildUrl from '../utils/buildUrl';
+import { API_URL } from '../env'
+
+interface ModelData {
+  macbooks: Model[]
+  lastUpdated: string
+  total: number
+}
 
 export interface Model {
   _id?: string;
@@ -9,6 +18,7 @@ export interface Model {
   noOfReviews?: number;
   url?: string;
   seller?: Seller;
+  lastUpdated: string
 }
 
 export interface Seller {
@@ -21,49 +31,48 @@ export interface Seller {
 }
 
 interface Props {
-  children: JSX.Element
+  children: React.ReactNode
 }
 
-export interface State {
-  isLoading: boolean;
-  models: Model[];
-  lastUpdated: string;
-}
-
-const intialState: State = {
-  isLoading: false,
-  models: [],
+const initialState = {
+  macbooks: [],
   lastUpdated: '',
+  total: 0,
+  isLoading: false
 }
-export const ModelContext = React.createContext(intialState);
+
+export type ModelState = ModelData & { isLoading: boolean }
+export const ModelContext = React.createContext<ModelState>(initialState);
 
 const ModelContextProvider = ({ children }: Props) => {
-  const [models, setModels] = React.useState<Model[]>([]);
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);
-  const [lastUpdated, setLastUpdated] = React.useState<string>('');
+  const [modelData, setModelData] = React.useState<ModelData>(initialState);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [searchParams] = useSearchParams()
+  const page = searchParams.get('page')
 
   React.useEffect(() => {
     const getModels = async () => {
       setIsLoading(true);
-      const res = await fetch('http://localhost:4000/macbooks');
+      console.log("api: ", API_URL)
+      const url = buildUrl(API_URL as string, '/macbooks', { page: String(page) })
+      const res = await fetch(url)
 
       //Check if the fetch was successful
       if (res.status !== 200) {
-        setIsLoading(false);
-        throw new Error('Could not fetch models');
+        throw new Error('Could not fetch model data');
       } else {
-        let data = await res.json();
-        setIsLoading(false);
-        setModels(data);
-        setLastUpdated(new Date(data[0].createdAt).toLocaleDateString());
+        let data = await res.json() as ModelData;
+        setModelData(data);
       }
+
+      setIsLoading(false)
     };
 
     getModels();
   }, []);
 
   return (
-    <ModelContext.Provider value={{ isLoading, models, lastUpdated }}>
+    <ModelContext.Provider value={{ isLoading, macbooks: modelData.macbooks, lastUpdated: modelData?.macbooks?.at(0)?.lastUpdated ?? '', total: modelData.total }}>
       {children}
     </ModelContext.Provider>
   )
