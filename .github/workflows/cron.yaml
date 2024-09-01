@@ -1,0 +1,12 @@
+name: Crawl new data
+on: workflow_dispatch
+  # schedule:
+  #   - cron: '0 13 * * 2,5' # Run on Tuesdays and Fridays at 9am EST
+
+jobs:
+  crawl:
+    name: Crawl data and save data
+    runs-on: ubuntu-latest
+    steps:
+    - name: Crawl and save data
+      run: curl -X GET ${{ secrets.REACT_APP_API_URL }}/crawl'
