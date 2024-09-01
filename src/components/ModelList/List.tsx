@@ -4,12 +4,10 @@ import ListItem from './ListItem';
 import { ModelContext, ModelState } from '../../contexts/ModelContextProvider';
 import { useSearchParams } from 'react-router-dom';
 
+const LIMIT = 12
 const Pagination = () => {
   const [searchParams, setSearchParams] = useSearchParams()
-  const LIMIT = 12
   const pageParam = searchParams.get('page') ? Number(searchParams.get('page')) : 1
-  console.log("page param: ", pageParam)
-
   const { total } = useContext<ModelState>(ModelContext);
   const possiblePages = Math.ceil(total / LIMIT)
 
