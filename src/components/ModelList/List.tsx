@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { Wrap, Center, Spinner, Box, Button, HStack } from '@chakra-ui/react';
 import ListItem from './ListItem';
 import { ModelContext, ModelState } from '../../contexts/ModelContextProvider';
