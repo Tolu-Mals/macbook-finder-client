@@ -1,7 +1,7 @@
 name: Crawl new data
 on:
   schedule:
-    - cron: '10 23 * * 1' # Run on 12:10AM every sundays
+    - cron: '30 23 * * 0' # Run on 12:30AM every sundays
 
 jobs:
   crawl:
