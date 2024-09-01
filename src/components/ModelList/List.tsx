@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, useContext } from 'react';
 import { Wrap, Center, Spinner, Box, Button, HStack } from '@chakra-ui/react';
 import ListItem from './ListItem';
 import { ModelContext, ModelState } from '../../contexts/ModelContextProvider';
@@ -7,50 +7,56 @@ import { useSearchParams } from 'react-router-dom';
 const Pagination = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const LIMIT = 12
-  const page = searchParams.get('page') ?? 1
+  const pageParam = searchParams.get('page') ? Number(searchParams.get('page')) : 1
+  console.log("page param: ", pageParam)
 
-  const { total } = React.useContext<ModelState>(ModelContext);
+  const { total } = useContext<ModelState>(ModelContext);
   const possiblePages = Math.ceil(total / LIMIT)
-  const hasNextPage = page < possiblePages
-  const hasPreviousPage = page > 1
 
-  const onPrevPageClick = () => {
-    if (hasPreviousPage) {
-      const newParams = new URLSearchParams(searchParams)
-      newParams.set('page', String(Number(page) - 1))
-      setSearchParams(newParams)
-    }
+  const setPageParam = (newPage: number) => {
+    const newParams = new URLSearchParams(searchParams)
+    newParams.set('page', String(newPage))
+    setSearchParams(newParams)
   }
 
-  const onNextPageClick = () => {
-    if (hasNextPage) {
-      const newParams = new URLSearchParams(searchParams)
-      newParams.set('page', String(Number(page) + 1))
-      setSearchParams(newParams)
+  const getPaginationBtnArr = () => {
+    let buttonsArr = []
+    let i = 0
+
+    while (i < possiblePages) {
+      buttonsArr.push(i + 1)
+      i++
     }
+
+    return buttonsArr
+  }
+
+  const handlePaginationClick = (page: number) => {
+    setPageParam(page)
+  }
+
+  const PaginationButton = ({ page }: { page: number }) => {
+    console.log("page param and number: ", pageParam, page)
+    return (
+      <Button
+        onClick={() => handlePaginationClick(page)}
+        isActive={pageParam === page}
+        colorScheme="twitter"
+        variant="solid"
+        size="md"
+        px={4}
+      >{page}</Button>
+    )
   }
 
   return (
     <HStack justifyContent="center">
-      <Button
-        disabled={!hasPreviousPage}
-        onClick={onPrevPageClick}
-        colorScheme="twitter"
-        size="lg"
-        px={4}
-      >Previous</Button>
-      <Button
-        disabled={!hasNextPage}
-        onClick={onNextPageClick}
-        colorScheme="twitter"
-        size="lg"
-        px={4}
-      >Next</Button>
+      {getPaginationBtnArr().map((page: number) => <PaginationButton key={page} page={page} />)}
     </HStack>
   )
 }
 const List = () => {
-  const { macbooks, isLoading } = React.useContext<ModelState>(ModelContext);
+  const { macbooks, isLoading } = useContext<ModelState>(ModelContext);
 
   const loaderUIComp = (
     <Center h="533px">
