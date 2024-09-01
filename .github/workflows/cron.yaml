@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Crawl and save data
-      run: curl -X GET ${{ secrets.REACT_APP_API_URL }}/crawl'
+      run: curl ${{ secrets.REACT_APP_API_URL }}/crawl'
